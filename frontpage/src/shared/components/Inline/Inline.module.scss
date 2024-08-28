@@ -1,0 +1,19 @@
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-0.5px * var(--space));
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.childBox {
+  display: flex;
+  align-items: center;
+  padding: calc(0.5px * var(--space));
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}

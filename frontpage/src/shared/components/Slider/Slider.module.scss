@@ -1,0 +1,106 @@
+@import '../../scss/colors';
+@import '../../scss/mediaQueries.scss';
+
+.slider {
+  position: relative;
+}
+
+.sliderWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderContent {
+  position: relative;
+  display: flex;
+  will-change: transform;
+}
+
+.sliderItem {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+  justify-content: center;
+}
+
+.sliderButton {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: $mermaidDark20;
+  outline: none !important;
+
+  &:hover,
+  &:focus {
+    color: $mermaid;
+  }
+
+  &[disabled] {
+    color: $mermaidLight20;
+    border-color: $mermaidLight20;
+  }
+
+  @media (any-hover: none) {
+    display: none;
+  }
+}
+
+.sliderButtonPrev {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+.sliderButtonNext {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.iconLeft {
+  transform: rotate(180deg);
+}
+
+.dotContainer {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.dotButton {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0.125rem;
+  background-color: white;
+  border: 1px solid $grey70;
+  border-radius: 100%;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.dotButtonActive {
+  background-color: $mermaid;
+  border-color: $mermaid;
+}
+
+.zoomButtom {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+
+  @include desktop {
+    right: 0.5rem;
+    left: auto;
+  }
+}

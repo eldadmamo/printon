@@ -1,0 +1,65 @@
+@import '~@/shared/scss/colors.scss';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageNumbers {
+  color: $grey80;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem;
+  min-width: 2.5rem;
+
+  &:hover {
+    color: $mermaid;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.pageNumberActive {
+  composes: pageNumbers;
+
+  color: $mermaidDark20;
+  font-weight: 700;
+  border: 1px solid $mermaidDark20;
+  border-radius: 50%;
+}
+
+.ellipsis {
+  composes: pageNumbers;
+  text-align: center;
+
+  &:hover {
+    cursor: default;
+    color: $grey80;
+  }
+}
+
+.pageLeft,
+.pageRight {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $grey80;
+  padding: 0;
+  &[aria-disabled='true'] {
+    color: $grey20;
+    cursor: default;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.pageLeft {
+  margin-right: 1rem;
+}
+.pageRight {
+  margin-left: 1rem;
+}

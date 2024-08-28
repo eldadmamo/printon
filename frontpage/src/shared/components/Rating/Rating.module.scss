@@ -1,0 +1,24 @@
+@import '../../scss/colors';
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: $starYellow;
+  font-size: 2rem;
+}
+
+.average {
+  font-size: 0.625rem;
+}
+
+.count {
+  text-decoration: underline;
+}
+
+.average,
+.count {
+  margin-left: 0.25em;
+}

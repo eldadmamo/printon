@@ -1,0 +1,153 @@
+@import '../../scss/colors';
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  --slider-percent: 0;
+}
+
+.sliderRange {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.375em 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sliderRange:focus {
+  outline: none;
+}
+
+.sliderRange::-webkit-slider-runnable-track {
+  height: 0.5em;
+  background: linear-gradient(
+                  to right,
+                  $mermaidLight50 var(--slider-percent),
+                  $grey0 var(--slider-percent)
+  );
+  border: 0.0625rem solid $grey45;
+  border-radius: 0.5em;
+}
+
+.sliderRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: -0.375em; // (1.25 - 0.5) / 2
+  background: $mermaidDark20;
+  border-radius: 50%;
+}
+
+.sliderRange:hover::-webkit-slider-thumb,
+.sliderRange:focus::-webkit-slider-thumb {
+  background: $mermaid;
+}
+
+.sliderRange::-moz-range-track {
+  height: 0.5em;
+  background: linear-gradient(
+                  to right,
+                  $mermaidLight50 var(--slider-percent),
+                  $grey0 var(--slider-percent)
+  );
+  border: 0.0625rem solid $grey45;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.sliderRange::-moz-range-thumb {
+  width: 1.25em;
+  height: 1.25em;
+  background: $mermaidDark20;
+  border: none;
+  border-radius: 50%;
+}
+
+.sliderRange:hover::-moz-range-thumb,
+.sliderRange:focus::-moz-range-thumb {
+  background: $mermaid;
+}
+
+.sliderRange:disabled::-webkit-slider-runnable-track {
+  background: $grey5;
+}
+
+.sliderRange:disabled::-webkit-slider-thumb {
+  background: $grey20;
+}
+
+.sliderRange:disabled::-moz-range-track {
+  background: $grey5;
+}
+
+.sliderRange:disabled::-moz-range-thumb {
+  background: $grey20;
+}
+
+.sliderHeader {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.sliderLabel {
+  font-weight: 700;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+
+.sliderLabelWithFollowingInput {
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 0.5em;
+}
+
+.sliderLabel:last-child {
+  padding-right: 0;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border: 0.0625rem solid $grey45;
+  border-radius: 0.25rem;
+}
+
+.sliderInput {
+  flex: none;
+  height: 2em;
+  margin-left: auto;
+  padding: 0 0.5em;
+  text-align: center;
+  background: $grey0;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.symbolRight {
+  padding-right: 0.5rem;
+  color: $grey40;
+}
+.symbolLeft {
+  padding-left: 0.5rem;
+  color: $grey40;
+}
+
+.sliderInputFollowing {
+  margin-right: auto;
+  margin-left: var(--slider-percent);
+  //noinspection CssInvalidFunction
+  transform: translateX(calc(var(--slider-percent) * -1));
+}
+
+.sliderInput:hover,
+.sliderInput:focus {
+  border-color: $mermaid;
+}
+
+.sliderInput:focus {
+  outline: none;
+}

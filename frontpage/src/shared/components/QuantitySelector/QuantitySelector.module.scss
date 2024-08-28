@@ -1,0 +1,62 @@
+@import '../../scss/colors';
+@import '../../scss/mediaQueries.scss';
+
+.selectorWithInfo {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.selectorBox {
+  display: flex;
+  max-width: 100%;
+  padding-top: 0.25rem;
+}
+
+.input {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+  height: 2.5rem;
+  appearance: none;
+  border-radius: 0;
+  font-size: 1rem;
+  background-color: $grey0;
+  border: 1px solid $grey45;
+  border-left-width: 0;
+  border-right-width: 0;
+  order: 1;
+
+  @include tablet {
+    max-width: 3.75rem;
+  }
+}
+
+.counterButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid $grey45;
+  background-color: $grey0;
+  font-size: 1.625rem;
+  color: $grey80;
+  outline: none;
+  &[disabled] {
+    background-color: $grey5;
+    color: $grey40;
+    cursor: not-allowed;
+  }
+}
+
+.plus {
+  border-radius: 0 4px 4px 0;
+  order: 2;
+}
+
+.minus {
+  border-radius: 4px 0 0 4px;
+  order: 0;
+}

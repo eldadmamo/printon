@@ -1,0 +1,57 @@
+@import '../../scss/colors';
+
+.radio {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+}
+
+.radio:has(.radioInput:disabled) {
+  cursor: auto;
+}
+
+.radioInput {
+  composes: srOnly from '../../scss/utility.module.scss';
+}
+
+.radioIndicator {
+  flex: none;
+  margin-right: 0.5em;
+  color: $grey45;
+  background-color: $grey0;
+  border: 0.0625rem solid currentColor;
+  border-radius: 50%;
+}
+
+.radioIndicator::before {
+  content: '';
+  display: block;
+  width: 0.875em;
+  height: 0.875em;
+  margin: 0.25em;
+  opacity: 0;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.radioInput:checked ~ .radioIndicator {
+  color: $mermaidDark20;
+}
+
+.radioInput:checked ~ .radioIndicator::before {
+  opacity: 1;
+}
+
+.radio:hover .radioIndicator,
+.radioInput:focus ~ .radioIndicator {
+  color: $mermaid;
+}
+
+.radioInput:disabled ~ .radioIndicator {
+  color: $grey45;
+  background-color: $grey5;
+}
+
+.radioInput:disabled ~ .radioLabel {
+  color: $grey45;
+}

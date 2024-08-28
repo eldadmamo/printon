@@ -1,0 +1,30 @@
+@import '../../scss/mediaQueries';
+
+.tilesBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1px * var(--space));
+}
+
+.tilesListItem {
+  display: flex;
+  flex: 0 0 var(--widthDefault);
+  max-width: var(--widthDefault);
+  padding: calc(1px * var(--space));
+  @include xs-mobile {
+    flex-basis: var(--widthMobile);
+    max-width: var(--widthMobile);
+  }
+  @include mobile {
+    flex-basis: var(--widthMobile);
+    max-width: var(--widthMobile);
+  }
+  @include tablet {
+    flex-basis: var(--widthTablet);
+    max-width: var(--widthTablet);
+  }
+  @include desktop {
+    flex-basis: var(--widthDesktop);
+    max-width: var(--widthDesktop);
+  }
+}

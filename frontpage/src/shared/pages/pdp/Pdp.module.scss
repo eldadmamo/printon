@@ -1,0 +1,120 @@
+@import '~@/shared/scss/mediaQueries.scss';
+@import '~@/shared/scss/colors.scss';
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(7, auto) 1fr;
+  grid-column-gap: 1.5rem;
+  @include desktop {
+    grid-template-rows: repeat(9, auto) 1fr;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  @include large-desktop {
+    grid-column-gap: 2rem;
+  }
+}
+
+.mainDetails {
+  grid-column: span 6;
+  margin-top: 1rem;
+  @include desktop {
+    grid-column: span 5;
+  }
+}
+
+.headlineAndRating {
+  display: flex;
+  justify-content: space-between;
+  grid-column: span 6;
+  margin-bottom: 1rem;
+  @include desktop {
+    grid-column: span 5;
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.headline {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  @include hide-below-tablet;
+
+  @include large-desktop {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+  }
+}
+
+.ratingAction {
+  display: block;
+  composes: unstyledButton from '../../scss/utility.module.scss';
+}
+
+.description {
+  @include desktop {
+    padding-right: 0.5rem;
+  }
+
+  > ul {
+    list-style: disc;
+    padding: 1.5rem;
+  }
+}
+
+.productDetails {
+  padding-bottom: 0.5rem;
+}
+
+.priceBox {
+  margin-right: 1rem;
+}
+
+.priceDetails,
+.discountLine {
+  margin: 0;
+  font-size: 0.75rem;
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}
+
+.priceDetails {
+  color: $grey40;
+}
+
+.discountLine {
+  color: $raspberry;
+}
+
+.formattedPrice {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  @include tablet {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+  @include large-desktop {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+  }
+}
+
+.strikeOut {
+  text-decoration-line: line-through;
+  color: $grey40;
+}
+
+.marginBottomBig {
+  margin-bottom: 1.5rem;
+}
+
+.sizeLayoutBox {
+  padding-bottom: 0.5rem;
+  @include tablet {
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../scss/colors';
+
+.base {
+  line-height: 1.5;
+}
+
+.xxsmall {
+  font-size: 0.625rem;
+}
+
+.xsmall {
+  font-size: 0.75rem;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.large {
+  font-size: 1.125rem;
+}
+
+.xlarge {
+  font-size: 1.25rem;
+}
+
+.xxlarge {
+  font-size: 1.5rem;
+}
+
+.light {
+  color: $grey0;
+}
+
+.grey40 {
+  color: $grey40;
+}
+
+.center {
+  text-align: center;
+}
+
+.lh1 {
+  line-height: 1;
+}
+
+.lh1p1 {
+  line-height: 1.1;
+}
+
+.lh1p2 {
+  line-height: 1.2;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

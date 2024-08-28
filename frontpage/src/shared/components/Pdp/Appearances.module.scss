@@ -1,0 +1,31 @@
+@import '../../scss/mediaQueries';
+
+@value appearance from './Appearance.module.scss';
+
+.appearanceList {
+  display: flex;
+  flex-wrap: unset;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 1rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.125rem;
+
+  @include desktop {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+    overflow: visible;
+  }
+
+  .appearance {
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+  }
+}
+
+.marginBottomSmall {
+  margin-bottom: 0.5rem;
+}

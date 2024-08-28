@@ -1,0 +1,35 @@
+.srOnly {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.srOnlyFocusable {
+  composes: srOnly;
+
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    white-space: inherit;
+    width: auto;
+  }
+}
+
+.unstyledButton {
+  /* other resets are active for all buttons in Page.module.scss */
+  padding: 0;
+  text-align: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}

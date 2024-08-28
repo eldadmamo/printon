@@ -1,0 +1,75 @@
+@import '../../scss/colors';
+
+.toggle {
+  cursor: pointer;
+  display: flex;
+}
+
+.toggle:has(.toggleInput:disabled) {
+  cursor: auto;
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleIndicator {
+  flex: none;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 3.75em;
+  height: 1.5em;
+  margin-right: 0.5em;
+  background: $grey50;
+  border-radius: 1.5em;
+  align-items: center;
+}
+
+.toggleIndicatorIcon {
+  font-size: 0.75em;
+  color: $grey0;
+}
+
+.toggleIndicatorIconChecked {
+  // the checkmark icon looks smaller than the X, so we use scale to fix
+  //  the visual appearance without impacting the actual size
+  transform: scale(1.4);
+}
+
+.toggleIndicator::after {
+  content: '';
+  position: absolute;
+  top: -0.25em;
+  bottom: -0.25em;
+  left: 0;
+  width: 2em;
+  background: $grey0;
+  border: 0.0625rem solid $grey25;
+  border-radius: 50%;
+  transition: 0.2s transform ease-in-out;
+}
+
+.toggleInput:checked ~ .toggleIndicator {
+  background: $mermaidDark20;
+}
+
+.toggleInput:checked ~ .toggleIndicator::after {
+  transform: translateX(1.75em);
+}
+
+.toggle:hover .toggleIndicator,
+.toggleInput:focus ~ .toggleIndicator {
+}
+
+.toggleInput:disabled ~ .toggleIndicator {
+  background: $grey20;
+}
+
+.toggleInput:disabled ~ .toggleIndicator .toggleIndicatorIcon {
+  color: $grey45;
+}
+
+.toggleInput:disabled ~ .toggleLabel {
+  color: $grey45;
+}

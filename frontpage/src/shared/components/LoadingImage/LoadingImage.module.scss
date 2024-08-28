@@ -1,0 +1,12 @@
+.img {
+  display: block;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+  max-width: 100%;
+  height: auto;
+}
+
+.loading {
+  opacity: 0;
+  transition: unset;
+}
