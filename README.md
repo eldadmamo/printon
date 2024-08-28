@@ -80,7 +80,7 @@ JWT_SECRET=your-secret-key
 
 ## Usage
 
-Once the application is running, open [http://localhost:5000](http://localhost:8000) in your browser. You can create an account, design custom products, and place orders.
+Once the application is running, open [http://localhost:8000](http://localhost:8000) in your browser. You can create an account, design custom products, and place orders.
 
 ## API Endpoints
 
