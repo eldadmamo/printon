@@ -1,4 +1,3 @@
-Here’s a template for your README.md that you can use for your print-on-demand website:
 IT is still ongoing project.
 ---
 
