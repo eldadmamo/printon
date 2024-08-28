@@ -264,7 +264,7 @@ const Content: PdpRoutePage = ({
     return (
         <>
             <Helmet>
-                <title>{`${productType.name} | Spreadshirt`}</title>
+                <title>{`${productType.name} | Destamerch`}</title>
                 <meta name="description" property="description" content={productType.name} />
                 {Object.entries(alternates).map(([locale, url]) => (
                     <link key={locale} rel="alternate" hrefLang={locale.replace('_', '-')} href={url} />

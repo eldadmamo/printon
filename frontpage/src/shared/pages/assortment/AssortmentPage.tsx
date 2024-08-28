@@ -72,7 +72,7 @@ const Content: Page = ({
     return (
         <Page>
             <Helmet>
-                <title>{title} | Spreadshirt</title>
+                <title>{title} | Destamerch</title>
                 <meta name="description" property="description" content={description} />
                 <link rel="canonical" href={canonical} />
             </Helmet>
