@@ -1,7 +1,7 @@
 IT is still ongoing project.
 ---
 
-# Destamerch Website
+# Printon Website
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-v14.17.0-green.svg)
@@ -12,7 +12,7 @@ IT is still ongoing project.
 
 ## Project Description
 
-This project is a **Destamerch** website that allows users to create custom designs, which can be printed on various products such as t-shirts, mugs, and posters. The site is built using **React** with **TypeScript** and follows a microfrontend architecture. The backend is powered by **Node.js**, providing a robust API for managing orders, products, and user accounts.
+This project is a **printon** website that allows users to create custom designs, which can be printed on various products such as t-shirts, mugs, and posters. The site is built using **React** with **TypeScript** and follows a microfrontend architecture. The backend is powered by **Node.js**, providing a robust API for managing orders, products, and user accounts.
 
 ## Features
 
